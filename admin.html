@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockVote - Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+
+<header>
+    <h1>BlockVote <span class="badge bg-primary ms-2" style="font-size: 10px; vertical-align: middle;">ADMIN</span></h1>
+    <div id="adminStatus" class="small text-secondary">Secured by Sepolia</div>
+</header>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-7 mb-4">
+            <div class="glass-card mb-4">
+                <h2 class="h4 mb-4">Create New Ballot</h2>
+
+                <div class="mb-3">
+                    <label class="form-label">Position Title</label>
+                    <input type="text" id="ballotTitle" class="form-control" placeholder="e.g. President">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Duration (Minutes)</label>
+                    <input type="number" id="ballotDuration" class="form-control" placeholder="1440">
+                </div>
+
+                <button class="btn btn-web3" onclick="createBallot()">Create Ballot</button>
+            </div>
+
+            <div class="glass-card mb-4">
+                <h2 class="h4 mb-4">Add Candidate</h2>
+
+                <div class="mb-3">
+                    <label class="form-label">Select Ballot</label>
+                    <select id="ballotSelect" class="form-select"></select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Candidate Name</label>
+                    <input type="text" id="candidateName" class="form-control" placeholder="John Doe">
+                </div>
+
+                <button class="btn btn-web3" onclick="addCandidate()">Add Candidate</button>
+            </div>
+
+            <!-- 🛠️ NEW COMPONENT: Manual Whitelist Form -->
+            <div class="glass-card">
+                <h2 class="h4 mb-4">Voter Registration (Whitelist)</h2>
+                <div class="mb-3">
+                    <label class="form-label">Student Wallet Address</label>
+                    <input type="text" id="voterAddressInput" class="form-control" placeholder="0x...">
+                </div>
+                <button class="btn btn-web3" onclick="registerVoter()">Authorize Address</button>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="glass-card">
+                <h2 class="h4 mb-4">Existing Ballots</h2>
+                <div id="ballotsContainer">
+                    <p class="text-secondary">No ballots created yet.</p>
+                </div>
+            </div>
+
+            <div class="glass-card mt-4">
+                <h3 class="h5 mb-3">System Audit</h3>
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-secondary small">Contract Status:</span>
+                    <span class="text-success small">Active</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-secondary small">Network:</span>
+                    <span class="text-info small">Ethereum Sepolia</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-secondary small">Admin Wallet:</span>
+                    <span id="walletAddress" class="text-info small">Not Connected</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span class="text-secondary small">Contract:</span>
+                    <span class="text-info small">Connected</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-secondary small">Total Ballots:</span>
+                    <span id="totalBallots" class="text-info small">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+
+<script>
+let provider;
+let signer;
+let contract;
+
+// ⚠️ UPDATE THIS WITH YOUR NEW DEPLOYED ADDRESS
+const contractAddress = "0xD7541FFAB41AB174c892338330CACc13515aA7B5";
+
+const contractABI = [
+    "function admin() view returns (address)",
+    "function createBallot(string,uint256)",
+    "function addCandidate(uint256,string)",
+    "function whitelistVoter(address)", // 👈 Added function
+    "function getBallotCount() view returns(uint256)",
+    "function getBallot(uint256) view returns(string,uint256,uint256)",
+    "function getCandidate(uint256,uint256) view returns(string,uint256)"
+];
+
+if (sessionStorage.getItem("isAdmin") !== "true") {
+    alert("Access Denied: Unverified Admin Credentials.");
+    window.location.href = "index.html";
+}
+
+async function connectWallet() {
+    if (!window.ethereum) {
+        alert("MetaMask not found.");
+        return;
+    }
+
+    if (typeof ethers === 'undefined') {
+        setTimeout(connectWallet, 300);
+        return;
+    }
+
+    try {
+        provider = new ethers.providers.Web3Provider(window.ethereum);
+        await provider.send("eth_requestAccounts", []);
+        signer = provider.getSigner();
+        contract = new ethers.Contract(contractAddress, contractABI, signer);
+
+        const userAddress = await signer.getAddress();
+        const realAdminAddress = await contract.admin();
+
+        if (userAddress.toLowerCase() !== realAdminAddress.toLowerCase()) {
+            sessionStorage.clear();
+            alert("Security Alert: Wallet address does not match contract owner.");
+            window.location.href = "index.html";
+            return;
+        }
+
+        document.getElementById("walletAddress").innerText =
+            userAddress.substring(0,6) + "..." + userAddress.substring(userAddress.length - 4);
+
+        loadBallots();
+    } catch (error) {
+        console.error(error);
+        alert("Failed to securely sync with the contract.");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    connectWallet();
+});
+
+// 🛠️ NEW FUNCTION: Execute Manual Whitelist Entry
+async function registerVoter() {
+    if (!contract) {
+        alert("Contract is not synced yet.");
+        return;
+    }
+
+    const inputField = document.getElementById("voterAddressInput");
+    const addressToRegister = inputField.value.trim();
+
+    if (!ethers.utils.isAddress(addressToRegister)) {
+        alert("Invalid Hexadecimal Format. Please provide a true Ethereum wallet address.");
+        return;
+    }
+
+    try {
+        const tx = await contract.whitelistVoter(addressToRegister);
+        alert("Writing authorization block... Please sign transaction.");
+        await tx.wait();
+        alert("Address successfully whitelisted inside smart contract registry!");
+        inputField.value = "";
+    } catch (error) {
+        console.error(error);
+        alert("Failed to whitelist voter. See console log.");
+    }
+}
+
+async function createBallot() {
+    if (!contract) return;
+    const titleInput = document.getElementById("ballotTitle");
+    const durationInput = document.getElementById("ballotDuration");
+
+    if (!titleInput.value || !durationInput.value) {
+        alert("Please fill out all fields.");
+        return;
+    }
+
+    try {
+        const tx = await contract.createBallot(titleInput.value, parseInt(durationInput.value));
+        await tx.wait();
+        alert("Ballot successfully committed to blockchain!");
+        titleInput.value = "";
+        durationInput.value = "";
+        loadBallots();
+    } catch(error) {
+        console.error(error);
+    }
+}
+
+async function addCandidate() {
+    if (!contract) return;
+    const ballotSelect = document.getElementById("ballotSelect");
+    const nameInput = document.getElementById("candidateName");
+
+    if (ballotSelect.value === "" || !nameInput.value) {
+        alert("Please select a ballot and provide a candidate name.");
+        return;
+    }
+
+    try {
+        const tx = await contract.addCandidate(parseInt(ballotSelect.value), nameInput.value);
+        await tx.wait();
+        alert("Candidate securely attached to ballot!");
+        nameInput.value = "";
+        loadBallots();
+    } catch(error) {
+        console.error(error);
+    }
+}
+
+async function loadBallots() {
+    if (!contract) return;
+    try {
+        const count = await contract.getBallotCount();
+        document.getElementById("totalBallots").innerText = count.toString();
+        const container = document.getElementById("ballotsContainer");
+        const select = document.getElementById("ballotSelect");
+
+        container.innerHTML = "";
+        if (count.toNumber() === 0) {
+            container.innerHTML = `<p class="text-secondary">No ballots created yet.</p>`;
+            select.innerHTML = `<option value="">-- No Active Ballots Available --</option>`;
+            return;
+        }
+
+        select.innerHTML = ""; 
+        for(let i = 0; i < count; i++) {
+            const ballot = await contract.getBallot(i);
+            const title = ballot[0];
+            const endTime = ballot[1];
+            const candidateCount = ballot[2];
+
+            select.innerHTML += `<option value="${i}">${title}</option>`;
+
+            let html = `
+            <div class="border rounded p-3 mb-3" style="background: rgba(255,255,255,0.02);">
+                <h5 class="text-info">${title}</h5>
+                <small class="text-secondary">Ends: ${new Date(endTime.toNumber() * 1000).toLocaleString()}</small>
+                <ul class="mt-2 list-unstyled">
+            `;
+
+            for(let j = 0; j < candidateCount; j++) {
+                const candidate = await contract.getCandidate(i, j);
+                html += `<li><span class="text-secondary">▪</span> ${candidate[0]} (${candidate[1].toString()} votes)</li>`;
+            }
+
+            html += `</ul></div>`;
+            container.innerHTML += html;
+        }
+    } catch (error) {
+        console.error("Error loading dashboards details:", error);
+    }
+}
+</script>
+</body>
+</html>
