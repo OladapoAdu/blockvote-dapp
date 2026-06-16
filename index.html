@@ -28,7 +28,7 @@
     let signer;
     let contract;
 
-    // Your actual deployed contract address
+    // Your actual updated contract address
     const contractAddress = "0xD7541FFAB41AB174c892338330CACc13515aA7B5";
 
     // Minimal ABI needed just to check the admin status
@@ -41,7 +41,7 @@
 
     async function connectWallet() {
         if (!window.ethereum) {
-            alert("MetaMask not detected! Please install it.");
+            alert("MetaMask not detected! Please install it or use an in-app Web3 browser.");
             return;
         }
 
@@ -52,12 +52,33 @@
             provider = new ethers.providers.Web3Provider(window.ethereum);
             await provider.send("eth_requestAccounts", []);
             signer = provider.getSigner();
+
+            // 🛡️ SEPOLIA NETWORK CHECK & ENFORCEMENT
+            // Automatically prompts MetaMask to switch to Sepolia if the user is on the wrong network
+            const { chainId } = await provider.getNetwork();
+            if (chainId !== 11155111) { 
+                try {
+                    await window.ethereum.request({
+                        method: 'wallet_switchEthereumChain',
+                        params: [{ chainId: '0xaa36a7' }], // 11155111 in hex format
+                    });
+                    // Refresh session provider and signer after a successful network switch
+                    provider = new ethers.providers.Web3Provider(window.ethereum);
+                    signer = provider.getSigner();
+                } catch (switchError) {
+                    alert("Please switch your MetaMask network to Sepolia Testnet manually inside your wallet.");
+                    connectBtn.disabled = false;
+                    connectBtn.innerText = "Connect Wallet";
+                    return;
+                }
+            }
             
             const userAddress = await signer.getAddress();
             walletDisplay.innerText = "Connected: " + userAddress;
 
-            // Instantiate contract to get the real contract owner from the blockchain
-            contract = new ethers.Contract(contractAddress, contractABI, provider);
+            // 🛠️ THE CROSS-DEVICE FIX: Changed 'provider' to 'signer'
+            // This ensures external clients and mobile browsers can read the variable securely inside an active user session
+            contract = new ethers.Contract(contractAddress, contractABI, signer);
             const realAdminAddress = await contract.admin();
 
             // Save wallet and authorization state locally
@@ -72,7 +93,7 @@
             }
 
         } catch (error) {
-            console.error(error);
+            console.error("Connection error details:", error);
             alert("Connection failed. Check console.");
             connectBtn.disabled = false;
             connectBtn.innerText = "Connect Wallet";
