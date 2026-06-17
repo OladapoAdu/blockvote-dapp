@@ -17,7 +17,11 @@
         <div class="glass-card text-center" style="width: 400px;">
             <h2 class="mb-4">Secure Voting</h2>
             <p class="text-secondary mb-4">Connect your MetaMask wallet to verify your identity on the blockchain.</p>
+            
             <button id="connectBtn" class="btn btn-web3 w-100">Connect Wallet</button>
+            
+            <a id="mobileLinkBtn" class="btn btn-success w-100 d-none" href="#">Open in MetaMask App</a>
+            
             <div id="walletAddress" class="mt-3 small text-info"></div>
         </div>
     </div>
@@ -38,6 +42,28 @@
     const walletDisplay = document.getElementById("walletAddress");
 
     connectBtn.addEventListener("click", connectWallet);
+
+
+    // Mobile device and environment check
+    window.addEventListener("DOMContentLoaded", () => {
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        
+        // If it's a mobile device AND window.ethereum doesn't exist (meaning they are in standard Chrome/Safari)
+        if (isMobile && !window.ethereum) {
+            const connectBtn = document.getElementById("connectBtn");
+            const mobileLinkBtn = document.getElementById("mobileLinkBtn");
+            
+            // Hide the broken desktop connect button
+            connectBtn.classList.add("d-none");
+            
+            // Generate the dynamic deep link (removes 'https://' from your current live URL automatically)
+            const cleanUrl = window.location.href.replace(/^https?:\/\//, "");
+            mobileLinkBtn.href = `https://metamask.app.link/dapp/${cleanUrl}`;
+            
+            // Show the mobile redirect button
+            mobileLinkBtn.classList.remove("d-none");
+        }
+    });
 
     async function connectWallet() {
         if (!window.ethereum) {
