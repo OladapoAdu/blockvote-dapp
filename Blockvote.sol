@@ -5,6 +5,9 @@ contract BlockVote {
 
     address public admin;
 
+    // 1. ADDED: Mapping to track which public keys have been manually authorized by the admin
+    mapping(address => bool) public isWhitelisted;
+
     constructor() {
         admin = msg.sender;
     }
@@ -29,6 +32,11 @@ contract BlockVote {
     modifier onlyAdmin() {
         require(msg.sender == admin, "Only admin");
         _;
+    }
+
+    // 2. ADDED: Function for the admin to manually register student addresses
+    function whitelistVoter(address _voter) public onlyAdmin {
+        isWhitelisted[_voter] = true;
     }
 
     // =========================
@@ -77,6 +85,8 @@ contract BlockVote {
         uint256 ballotId,
         uint256 candidateId
     ) public {
+        // 3. ADDED: Strict on-chain check to ensure the sender is whitelisted
+        require(isWhitelisted[msg.sender], "You are not a registered voter");
 
         require(ballotId < ballots.length, "Invalid ballot");
 

@@ -1,0 +1,107 @@
+Timestamp,Voter Address,Simulated Action,Status,Gas Used,Tx Latency (Seconds),Tx Hash,EVM Reversion Message
+2026-06-26T09:36:56.337Z,0x8f3BE53DefA956045841F98bA340a81a8f2bf872,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:36:59.999Z,0x8bEEeEed1812d98C86B6C99F7727590021b89Ea0,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:03.089Z,0xf7340fCC7574E3Cb1B13EF8De7A611003C68142C,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:06.495Z,0xce75289678222e0E74296483aAb40594a76d22E2,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:10.698Z,0x289f8E481F689Fa636f1143bB8eA9854AFe92BAf,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:13.791Z,0xA83D4ad380E2553C8f90ef9A8BCa9975eAe3CB50,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:16.750Z,0xcfb884C6853b871638395b3820e3224636B04117,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:20.122Z,0xd0bCBB75002996dC7C1DB5F6B29360d486E9FEDf,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:23.282Z,0x1d89E4C97a820907C051a1240b4c85d1DA7004C5,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:26.350Z,0xCd98D3bfB9B063841369146A448f8836880B9A7C,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:29.918Z,0x21C02432DBEF9C59D58F5C89d92dFF49FB985759,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:32.930Z,0xB5F3D431Fdd55bD64504ef3a2367EA3594e5D2C1,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:35.997Z,0xd21AFB8FE3F622c350544424e757106E25b641F8,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:39.861Z,0x7b1b9bFa2C5d1bAF27847CB84B6436103A65E66e,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:43.439Z,0xF31Eea5c76E92fea9a9755375B4c2bACD1dBEa51,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:46.913Z,0x9A9F1F7140c450377ECf6BC34cCF3cEE28a7900a,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:49.851Z,0x8ef2780dC6298A0A6c91D33c981F35cb92e2e7AC,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:52.839Z,0xcF3c1aD00897CFabFb298e832747eD537bcD612b,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:55.535Z,0xFdbfE83a6029D5674908674A70cc71a67406517A,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:37:59.885Z,0xCCF717e7d5894fA07b7ed5cb013625159e066c43,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:03.539Z,0x93a9011Dd245a8a83c9f45cFbB23cf16023903E5,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:07.827Z,0xF00CEB16Ca9724F9Ac32f5a0ab94f0b39184a0E8,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:11.245Z,0xF7E51064cdFA56d091639edAB2135645101e1662,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:14.230Z,0x8754a46362bDd0b62483F52B7A40Ca01aaD19108,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:17.376Z,0x789BAB0656Aa8a63c831274cb91D688469C5942A,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:21.658Z,0xF28567fDFa8B2BB806B92fB9c6b87A696744721A,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:24.622Z,0xB0E1d7d1873710E10625BF324332c57A010ab1B3,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:27.406Z,0x71064684addBcADB4258Ed931312c453dd32356b,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:30.232Z,0xA1a9A0d8d4244fa8CCC8B8C3EDee79Ba0Fd0806e,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:33.753Z,0x772bb53DEFa4bB756052c5aa673d34F2909405b4,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:38.746Z,0x80ae4bcD3e8A16761f79de530094bc03D4655e33,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:42.963Z,0xD209F624D5A7FF120A388254bB14334AEE5912Bf,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:46.840Z,0xa63E4E1450A27295a04f2CC1360a04fC223096A9,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:50.449Z,0xFD41201046056781a6FAAF266eFbC35c3Af39D22,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:53.737Z,0x7B7a4fb74A972E2b5F0e3B139aD0f84Df32f0532,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:38:56.547Z,0x61271Ebd9c705823eEC53559767fa314C07d0E1E,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:39:00.619Z,0x86976A818b1d3d6ee7F96f797280533b6309517f,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:39:03.551Z,0x92634b2b56974f004EA8b3e0d0D24f676236c13b,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:39:06.431Z,0x491BA4312b77A9c449ff4ca1f0328FbBfC80F0eb,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:39:09.710Z,0xBd9Bf5eCf2a5aEE116B7c2Bc67C4e2aBe3017Aa9,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:39:13.215Z,0x8917AbBF7DC721bFE8915B08FCe6CEa7A8226E47,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:39:16.111Z,0x7C83fa277EEa2b8A63FF8Dc25283e40C91D0bbb7,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:39:19.061Z,0x5A9d153Bb4608D20b314a8bbDf66FBAC4A133119,Cast Vote,SUCCESS,58744,17.62,0xfecaf38f031c02387e24845f7ea7e0119c6dfa60fe97424ae5789add8ec3b49b,N/A
+2026-06-26T09:39:36.683Z,0x291603f93F129D218283adD3E0CA44ebB983755D,Cast Vote,SUCCESS,58744,13.35,0x908b2767ebf55b287507daaee7941db94c4d1e03c6a88b38d6bbefa77d1d26f0,N/A
+2026-06-26T09:39:50.041Z,0x9622492fdD512Be9f231E13Ca2Da8504b86aF402,Cast Vote,SUCCESS,58744,9.95,0x00d669cc5e6123ddbfb5221d2d40493a25a201374d9edc7db58a4b2f92d514ce,N/A
+2026-06-26T09:39:59.994Z,0x9622492fdD512Be9f231E13Ca2Da8504b86aF402,Duplicate Vote Attack,BLOCKED,0,1.77,N/A,EVM State Reverted: Already Voted
+2026-06-26T09:40:01.771Z,0x2e23f5A4CE6bc37A6AD6A2fD34609c2fd2e24b53,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:40:05.325Z,0x459C6a906d8497839DfdDC5CbA6D14E3C732ff12,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:40:08.754Z,0x5681686D8350442d1B27bD93Df0FA9cBA29e812e,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:40:11.977Z,0xFb11E2966C2277D85e88f7886aE48a7f40e0125d,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:40:18.082Z,0xC9480e545EF6C5D888FBEB4E02c3deFf2bb34759,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:40:21.000Z,0x54fd04B86e685926772673aD17e7ED847fE7C2aD,Cast Vote,SUCCESS,58744,14.21,0x99750e511d44ea4782926a5411dc29eccd24ad22f23d94e33e23b80e7a558e19,N/A
+2026-06-26T09:40:35.218Z,0xB8447C8319B379BD88D009dc25305Cf0bc21D872,Cast Vote,SUCCESS,58744,14.80,0x332c6ad8b36301588b8f7df86bd9667739cddb9c9e7233a6351aa18a5b4c1afb,N/A
+2026-06-26T09:40:50.023Z,0xc03976C0EadCA1B25281691B3A49AEd64EAf9FEd,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:40:52.793Z,0xcF72f3D90744c411158E10C13830E6F4C4d436d2,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:40:55.551Z,0x2cDEb185F91a76D8d3D806CEf7Ee18B900BffEbD,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:40:59.159Z,0x494c03006085eABb6CA575b155354c55231f4649,Cast Vote,SUCCESS,58744,13.13,0x2bb342d6fd7013f2f4eb68cc9860af9aa4a450fd8a4c16c88626ae4136dcdaf2,N/A
+2026-06-26T09:41:12.295Z,0x21D39334C0bD5D2a15D67c1B9e5ad5930e844eDD,Cast Vote,SUCCESS,58744,13.33,0x6a47a6f251a5b3b37f0a2c41044fa2f66536ea2b53d90a789c08fd4c22e2db6c,N/A
+2026-06-26T09:41:25.625Z,0x68dCC56faC19c2b4Ae1083CfBb9Dcbfc9E50Bc33,Cast Vote,SUCCESS,58744,10.77,0x13b167394e7c7a8c1143ec0ea7b25b0646a7d4505bed99a22f1c702d001e74e9,N/A
+2026-06-26T09:41:36.395Z,0xB99Bd34210A9d84786f42fC585Cf76ed2E818581,Cast Vote,SUCCESS,58744,10.19,0x4aa5d38944f6d0e4c32b5f64ecf2680166894e4bc633c8566cac198c3cc71268,N/A
+2026-06-26T09:41:46.592Z,0x0397484F277b7061e882E8754401ABE09B040FF2,Cast Vote,SUCCESS,58744,14.00,0xe7cfb667f60d83ec1fba474ca7fbe5d1fd44c52daba02a374b0a3fceaea47dc3,N/A
+2026-06-26T09:42:00.597Z,0x0397484F277b7061e882E8754401ABE09B040FF2,Duplicate Vote Attack,BLOCKED,0,0.89,N/A,EVM State Reverted: Already Voted
+2026-06-26T09:42:01.491Z,0xb692b91adc27a7715aA055031D5bd09494DE2637,Cast Vote,SUCCESS,58744,14.21,0xa0353b75f2ffc283da3dda743dabe64765e18bb322eae17063b714715e137188,N/A
+2026-06-26T09:42:15.705Z,0x5fe4d4238aa915246B2fef300bB4AfE1d7d90A2E,Cast Vote,SUCCESS,58744,9.51,0x3fd992c827107c3d0ed0de775e943ce15911df393fe5a1e72b97d6276a85e6d7,N/A
+2026-06-26T09:42:25.215Z,0x30683CEe8145BD9091Be41aCc8f3C6a4a639A979,Cast Vote,SUCCESS,58744,12.80,0x856c2dacc0157974b1677bda43c15623571059423d61ac490d9d34e3effa5116,N/A
+2026-06-26T09:42:38.015Z,0x29D56a6B1C223E1683Faf6dF2821726d0F857EaB,Cast Vote,SUCCESS,58744,9.57,0xaf52b508b2c5cbea9b9ac6ce0f749dd55e2a5253b902cb62927f06f943fc77b5,N/A
+2026-06-26T09:42:47.594Z,0x735ad700395de383F3dA675e7163C1B9B5C48Fc1,Cast Vote,SUCCESS,58744,14.09,0x741e190957c34fb8b0bdd99aed455e43239db9e4d80e42e465467b7f30cd6e52,N/A
+2026-06-26T09:43:01.682Z,0x735ad700395de383F3dA675e7163C1B9B5C48Fc1,Duplicate Vote Attack,BLOCKED,0,1.82,N/A,EVM State Reverted: Already Voted
+2026-06-26T09:43:03.507Z,0x7312B0cc7cfb7821ECFfE679A1Ef20F15f0A86c9,Cast Vote,SUCCESS,58744,10.76,0xca2b65c61b1da1d181f562d029d3ef79ad8b898d7158618a794d15586ddae854,N/A
+2026-06-26T09:43:14.269Z,0xb2B4C3Fc8CF4588Aa1cDEf0eb0044586032C7533,Cast Vote,SUCCESS,58744,10.27,0xa920aaebae107253b19107abe230a30b9ee2e4057c9b936adc0d155c739adaca,N/A
+2026-06-26T09:43:24.545Z,0x3BE3A311e9C9FA307C9d08219fC238f135B89987,Cast Vote,SUCCESS,58744,11.97,0x8382b156ffc35ab3fadd439b95c72fad54f873a27051c2c41ebf5f698076caf7,N/A
+2026-06-26T09:43:36.521Z,0x74A5201d8ddD41BC5cA10697Ada95e6CD14804f1,Cast Vote,SUCCESS,58744,9.82,0x35c25c79b88e85eb94c67291010f10b15920f08455c66a4e716e750a26783352,N/A
+2026-06-26T09:43:46.349Z,0xCDBD12C5B515bE146FaF20922fF680E6168f1A50,Cast Vote,SUCCESS,58744,14.01,0x1217fffbc180a1527671f763b07b98fcac5c1b818b0362dd225d3537ed2c8bf0,N/A
+2026-06-26T09:44:00.359Z,0xCDBD12C5B515bE146FaF20922fF680E6168f1A50,Duplicate Vote Attack,BLOCKED,0,1.73,N/A,EVM State Reverted: Already Voted
+2026-06-26T09:44:02.089Z,0x642723382374Fd0E74cdAcfa290Dc87B22994839,Cast Vote,SUCCESS,58744,9.05,0x879acf33e364559e401a51257369bf0863779142b1eaba7ea62b5dc94a7ad239,N/A
+2026-06-26T09:44:11.144Z,0xC659f64d5540889cA5D5b48E75027d89F9a33dC2,Cast Vote,SUCCESS,58744,14.67,0xb830c09495c983589764b984f57136f53d8ade3d7a6b8cc046dbc7ced41f5f2b,N/A
+2026-06-26T09:44:25.816Z,0xacA0b3440DE981F01Dd1D0970c6F1297A8C9f6d3,Cast Vote,SUCCESS,58744,14.68,0x00058b9ae553dafc3145aebdd8cbcd77ed10867c128ef94536f3090f59d783d2,N/A
+2026-06-26T09:44:40.496Z,0x2b1bd8a7b0B2b9a7d2D9f7ec6ae97FC78485Ab83,Cast Vote,SUCCESS,58744,19.36,0xd4a13a425f07562d541986208f73b4d790dbd32bcab33776fd0d1f33c1f1704a,N/A
+2026-06-26T09:44:59.860Z,0x98D74bc397099D91941c9BC987F2494c307f8A60,Cast Vote,SUCCESS,58744,13.87,0x27027959e7fe8db88791757b534952609621e0d4fcec4bda3798f2e1bdc5d17d,N/A
+2026-06-26T09:45:13.741Z,0x98D74bc397099D91941c9BC987F2494c307f8A60,Duplicate Vote Attack,BLOCKED,0,0.80,N/A,EVM State Reverted: Already Voted
+2026-06-26T09:45:14.556Z,0x3ad08cB0eE5BAc2f22682437129C3125f3B79e9E,Cast Vote,SUCCESS,58744,21.45,0xf32e544da97bc2061e280e7988f82fd31b81150a71c3ebb4ebdc8c428491a1b0,N/A
+2026-06-26T09:45:36.012Z,0xcDa5608d999F51f9283F4F1849710FdA2AC9BF66,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:45:39.308Z,0x654Ddcc3284aa4D7A89210419f1CcD65A27dA5D1,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:45:42.678Z,0xAb98054C96F08BA0E415909eb19507Fc3EBfDa1b,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:45:46.797Z,0xDA708C9d48b0Ab12E7546569d6541f76b7926A7B,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:45:51.014Z,0xec058b840c699b39703051C5d49D8c77b40Fbcb0,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:45:57.270Z,0x0DeC8f2a6fa701a6DcC9F716bDBe1F74FC91913F,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:46:01.124Z,0x350f9ff409924E0B8cF0f4a59620588D76910B11,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:46:05.217Z,0x15121Ee1286d6a3B195D51c91B22adF6a083FDA9,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:46:08.651Z,0xab4f43c40a8fE70EE12a661B455142694814e1c9,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:46:12.082Z,0x8bd33C41d42d8A952246a7888b7ce7B6501fB9f2,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:46:16.696Z,0xEBf6c9a7ceda8D8584240CbE1d1c97E9af070C97,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:46:20.295Z,0xED6Ced0b88362B7967b85414Cb742e19f2f2531d,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:46:24.228Z,0xd504B31C25CCDfDA435593934cB2E1F6E65b35f0,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:46:28.876Z,0x9f3875106399FBb899A5587E0D1c92CA88c5aB1b,Cast Vote,FAILED,0,latency,N/A,insufficient funds for intrinsic transaction cost (transacti
+2026-06-26T09:46:32.988Z,0x1a07071Eca96B0DF2a7461059fAE2fBf1F970ada,Cast Vote,SUCCESS,58744,13.30,0x13f414b0896fa8d39624187506de7ba3ab552eea2fc40ac57ed54bbe8efe4597,N/A
+2026-06-26T09:46:46.296Z,0x6055892126275F33EE77fA83784689bd0a0acfD8,Cast Vote,SUCCESS,58744,13.60,0x7c3bd04992a6c34ee94682ef66d1c5cb5c7f207a29e61e7b065b68f874ca9809,N/A
+2026-06-26T09:46:59.904Z,0x9122e43325eD4EDdFcc26D81213A2b6269Bc7c4D,Cast Vote,SUCCESS,58744,14.92,0xf975453ff2a355914dc500c86d7e29b7c0d33bb918da21a315e56277639f975d,N/A
+2026-06-26T09:47:14.827Z,0x9f144E902B030825b55eDC2256fA670b581EE2Bd,Cast Vote,SUCCESS,58744,10.41,0xf9d7089cbe1382d050a697f30d1f56b5600f778b2ecb1396c695402b0a4546dd,N/A
+2026-06-26T09:47:25.247Z,0xe4c8657c4F9e98935A416c9C8024ad3540012c5E,Cast Vote,SUCCESS,58744,9.97,0x986ebd9c6bdb1384fdfbc79290e51599100f9e64b2db63a498adc6dbb1045384,N/A
+2026-06-26T09:47:35.226Z,0xe4c8657c4F9e98935A416c9C8024ad3540012c5E,Duplicate Vote Attack,BLOCKED,0,0.83,N/A,EVM State Reverted: Already Voted
+2026-06-26T09:47:36.066Z,0x0514d48EE4053Ba11C03b6Ad48588ab2746b16A6,Cast Vote,SUCCESS,58744,11.52,0x9f8974262a3eb72bc1c9f3c5cbf364043bf22e83911792b3618a4ad49f191ddc,N/A
+2026-06-26T09:47:47.590Z,0x1bB1d167F8392cb8F5f114f16c75885A355a7782,Cast Vote,FAILED,0,latency,N/A,execution reverted: "You are not a registered voter" (action
+2026-06-26T09:47:48.432Z,0xE400AeE3B8B18644EA58b89676452E255b85804B,Cast Vote,FAILED,0,latency,N/A,execution reverted: "You are not a registered voter" (action
+2026-06-26T09:47:49.292Z,0x39Aa89102733cd31112e402A54868317964C3897,Cast Vote,FAILED,0,latency,N/A,execution reverted: "You are not a registered voter" (action
+2026-06-26T09:47:51.253Z,0xf3f34E59721d5217687A660AAd5913d035550B8A,Cast Vote,FAILED,0,latency,N/A,execution reverted: "You are not a registered voter" (action
